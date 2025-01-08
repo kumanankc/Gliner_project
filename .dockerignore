@@ -9,5 +9,4 @@ venv/
 *.log
 .git
 .gitignore
-Dockerfile
 .dockerignore
