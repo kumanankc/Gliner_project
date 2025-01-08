@@ -37,6 +37,8 @@ class EntityResponse(BaseModel):
     entities: List[Entity]
 
 class HealthResponse(BaseModel):
+    model_config = {"protected_namespaces": ()}
+    
     status: str
     model_name: str
     version: str = "1.0.0"
