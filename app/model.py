@@ -1,7 +1,7 @@
 from gliner import GLiNER
 import logging
 from typing import List, Dict, Any
-from .config import settings
+from app.config import settings
 
 logger = logging.getLogger(__name__)
 

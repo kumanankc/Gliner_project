@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException
 import logging
-from .config import settings
-from .schemas import TextInput, Entity, EntityResponse, HealthResponse
-from .model import NERModel
+from app.config import settings
+from app.schemas import TextInput, Entity, EntityResponse, HealthResponse
+from app.model import NERModel
 
 # Configure logging
 logging.basicConfig(
