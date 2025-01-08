@@ -35,6 +35,17 @@ async def load_model():
         logger.error(f"Error during model initialization: {str(e)}")
         raise RuntimeError(f"Failed to initialize model: {str(e)}")
 
+@app.get("/")
+async def root():
+    """Root endpoint showing API information."""
+    return {
+        "name": settings.PROJECT_NAME,
+        "version": settings.VERSION,
+        "description": "GLiNER Entity Extraction API",
+        "docs": "/docs",
+        "health": "/health"
+    }
+    
 @app.post("/predict")
 async def predict(input_data: TextInput):
     """Predict named entities in the input text."""
