@@ -14,12 +14,9 @@ spec:
     spec:
       containers:
         - name: gliner-k8s
-          image: kumanankc/gliner-project:latest # Image that will be used to containers in the cluster
-          imagePullPolicy: IfNotPresent
+          image: kumanankc/gliner_project:latest # Image that will be used to containers in the cluster
           ports:
             - containerPort: 8000 # The port that the container is running on in the cluster
-
-
 ---
 
 apiVersion: v1 # Kubernetes API version
